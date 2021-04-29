@@ -6,7 +6,380 @@
 		
 		<meta name="作者" content="李昊亮"/>
 		
-		<link rel="stylesheet" type="text/css" href="./css/叮叮书店.css"/>
+		<style type="text/css">
+			
+			/* 公共 */
+			*{
+				padding: 0px;
+				margin: 0px;
+				text-decoration: none;
+			}
+
+			body{
+				font:62.5%/1.4 "微软雅黑", verdana, arial, helvetica, sans-serif;
+				width: 1100px;
+			}
+			h1, h2, h3, h4, h5, h6 {
+				font-size: 1.6em;
+			}
+			p, a, span {
+				font-size: 1.4;
+			}
+			p{
+				text-indent: 2em;
+				text-align: justify;
+			}
+			ul{
+				list-style-type: none;
+			}
+			img{
+				border: none;
+			}
+			mark{
+				background-color: #e3b403;
+				color: #FFFFFF;
+			}
+			/*标题栏背景*/
+			.标题{
+				color: #734633;
+				margin-top: 5px;
+				padding-bottom: 5px;
+				background-image: url(../叮叮书店资源/背景/标题栏背景.png);
+				background-repeat: no-repeat;
+				padding-left: 30px;
+				border-bottom: 1px solid #834524;
+			}
+			.本周推荐 .标题{background-position: 0 -3px;}
+			.最近新书 .标题{background-position: 0 -38px;}
+			.最近促销 .标题{background-position: 0 -68px;}
+			.畅销图书 .标题{background-position: 0 -98px;}
+			.图书分类 .标题{background-position: 0 -128px;}
+			.合作伙伴 .标题{background-position: 0 -155px;}
+			.关于书店 .标题{background-position: 0 -182px;}
+
+			/* 加入购物车 详细内容 图标 */
+			.购物详情 a{
+				text-decoration: none;
+				background: #a15b39;
+				color: #FFFFFF;
+				line-height: 25px;
+				display: inline-block;
+				text-align: center;
+				width: 80px;
+				opacity: 0.9;
+			}
+			.购物详情 a:hover{
+				text-decoration: none;
+				opacity: 1;
+			}
+				/*  页眉  */
+				#页眉{
+					width: 1100px;
+				}
+					/* 页眉-头部 */
+					.页眉-头部{
+						height: 150px;
+						background-image: url(../叮叮书店资源/背景/首页页眉背景.jpg);
+						position: relative;	/* 定位,相对定位 */
+					}
+						/*logo*/
+						#logo h1:first-letter{/* 第一个字增大 */
+							font-size: 140%;
+						}
+						#logo h1{
+							position: absolute;	
+							top: 40px;
+							left: 110px;
+							font-size: 1.8em;
+							color: #503;
+							text-decoration: none;
+							font-weight: normal;
+						}
+						/* 搜索 */
+						#搜索{
+							position: absolute;
+							top: 111px;
+							right: 20px;
+							text-align: right;
+						}
+						#搜索 input[type="search"]{
+							font-family: "微软雅黑";
+							background-color: #f3f3f3;
+							border: solid 1px #ccc;
+							height: 30px;
+							line-height: 30px;
+							width: 200px;
+							font-size: 1.6em;
+							padding-left: 5px;
+							display: inline-block;
+							vertical-align: top;
+
+						}
+						#搜索 input[type="submit"]{
+							font-family: 微软雅黑;
+							background-color: #B4B4B4;
+							color: #FFF;
+							border: solid 1px #b4b4b4;
+							height: 30px;
+							display: inline-block;
+							font-size: 1.6em;
+							vertical-align: top;
+							padding: 0 10px;
+						}
+					/* 导航 */
+					#导航{
+						background-image: url(../叮叮书店资源/背景/首页导航背景.jpg);
+						position: relative;
+					}
+						#导航-购物车{
+								position: absolute;
+								right: 5px;
+								top: 10px;
+						}
+						#导航-购物车 a{
+							display: inline-block;
+							color: #000000;
+							text-decoration: none;
+							font-size: 1.8em;
+							line-height: 40px;
+							text-align: center;
+							padding-left: 40px;
+							padding-right: 5px;
+							right: 15px;
+
+							background-image: url(../叮叮书店资源/背景/购物车图标.gif);
+							background-repeat: no-repeat;
+							background-position: 10px 10px;
+							background-color: #f3f3f3;
+						}
+						#导航-购物车 a:hover{
+							color: #ff0000;
+						}
+
+				/* 内容	 */
+					/* 左边内容区 */
+					#内容 .左边内容区{
+						width: 640px;
+						display: inline-block; 
+						vertical-align: top;
+						margin-right: 10px;
+
+						/* 下划线虚线 */
+						border-bottom: #ccc dashed 1px;
+						margin-bottom: 10px;
+					}
+					#内容 .左边内容区 section h3{
+						margin: 5px 0 10px 0;
+					}
+						/* 图片切换广告 */
+
+						/* 本周推荐 *//* 图片内容水平显示 */
+						.本周推荐{
+
+						}
+						.本周推荐 img{
+							display: inline-block;
+							width: 200px;
+							height: 200px;
+							margin-bottom: 10px;
+							opacity: 0.9;
+						}
+						.本周推荐 img:hover{
+							opacity: 1;
+						}
+						.本周推荐 h3{
+							text-align: center;
+							padding-bottom: 10px;
+							padding-top: 10px;
+						}
+						.本周推荐 .本周推荐-内容{
+							display: inline-block;
+							width: 420px;
+							vertical-align: top;
+							box-sizing: border-box;
+							padding-right: 10px;
+
+						}
+						.本周推荐 .本周推荐-书名{
+							border-bottom: #ccc dashed 2px;
+						}
+						.本周推荐 .购物详情{
+							text-align: right;
+						}
+
+						/* 最近新书 *//* 不同书籍水平显示 */
+						.最近新书{
+							border-bottom: #ccc dashed 2px;
+						}
+						.最近新书 .最近新书-书名{
+							width: 300px;
+							display: inline-block;
+							vertical-align: top;
+							text-align: center;
+							margin: 10px 10px 10px 5px;
+
+
+							position: relative;
+							overflow: hidden;
+							border: 1px solid rgba(255,0,0,0.3);
+							perspective: 1000px;
+						}
+						.最近新书 img{
+							vertical-align: middle;
+							height: 300px;
+						}
+						.最近新书 .最近新书-文字特效{
+							position: absolute;
+							left: 0px;
+							top: 30px;
+							height: 100%;
+							width: 88%;
+							margin-bottom: 20px;
+							padding: 10px 10px 10px 18px;
+							opacity: 0;
+							z-index: -1;
+						}
+						.最近新书 :hover .image-box{
+							transform: rotateX(60deg);
+							transition: 1s;
+							transform-origin: center bottom; 
+						}
+						.最近新书 :hover .最近新书-文字特效{
+							opacity: 1;
+							transition: 2s;
+						}
+						/* 最近促销 *//* 不同书籍水平显示 */
+						.最近促销 img{
+							height: 300px;
+						}
+						.最近促销 .最近促销-书名{
+							width: 300px;
+
+							display: inline-block;
+							vertical-align: top;
+							text-align: center;
+							margin: 10px 0 10px 0;
+						}
+
+
+					/* 右边边栏区 */
+					#内容 .右边边栏区{
+						width: 400px;
+						display: inline-block;
+						vertical-align: top;
+					}
+						/* 畅销图书 */
+						.畅销图书 li{
+							counter-increment: 畅销图书计数;
+							display: inline-block;
+							width: 100%;
+							vertical-align: bottom;
+							overflow: hidden;
+							white-space: nowrap;
+							text-overflow: ellipsis;
+							margin-top: 8px;
+							transition: text-shadow 1s linear;
+							border-bottom: #ccc dashed 1px;
+						}
+						.畅销图书 li,.畅销图书-书籍{
+							display: inline-block;
+						}
+						.畅销图书 li:before{
+							content: counter(畅销图书计数);
+							background: #7b5830;
+							padding: 2px 5px;
+							color: #fff;
+							margin-right: 5px;
+							vertical-align: top;
+						}
+						.畅销图书 a{
+							color: #000000;
+							text-decoration: none;
+							font-size: 1.6em;
+						}
+						.畅销图书-图片,.畅销图书-内容{
+							display: none;
+						}
+						.畅销图书-内容 strong{
+							display: block;
+							color: #FF0000;
+							text-align: left;
+							margin-top: 20px;
+							font-size: 1.4em;
+						}
+						.畅销图书-内容 del{
+							text-decoration:line-through;
+							font-size: 1.4em;
+							font-weight: 900;
+						}
+						.畅销图书 li:hover .畅销图书-书名{
+							display: none;
+						}
+						.畅销图书 li:hover .畅销图书-图片,.畅销图书 li:hover .畅销图书-内容{
+							text-shadow:  1px 4px 4px #000;
+							display: inline-block;
+						}
+
+						/* 图书分类与合作伙伴 内容水平对齐 */
+						.图书分类,.合作伙伴{
+							width: 180px;
+							display: inline-block;
+							vertical-align: top;
+							margin-right: 5px;
+						}
+						.图书分类 li a,.合作伙伴 li a{
+							text-decoration: none;
+							color: #000;
+						}
+						.图书分类 a:hover,.合作伙伴 a:hover{
+							text-decoration: none;
+							color: #d78849;
+						}
+						.图书分类 ul,.合作伙伴 ul{
+							margin: 10px 0px 10px 20px;
+						}
+
+						/* 关于书店 */
+						.关于书店 img{
+							display: inline-block;
+							width: 120px;
+							box-sizing: border-box;
+							padding: 10px 10px;
+						}
+						.关于书店 p{
+							display: inline-block;
+							width: 260px;
+							vertical-align: top;
+							box-sizing: border-box;
+							padding-bottom: 10px;
+						}		
+				/* 页脚 */
+				#页脚{
+					background-image: url(../叮叮书店资源/背景/首页页脚背景.jpg);
+					height: 60px;
+
+				}	
+					/* 页脚导航 */
+					.页脚导航 a{
+						display: block;
+						float: left;
+						color: #FFF;
+						text-decoration: none;
+						width: 10em;
+						text-align: center;
+						line-height: 60px;
+						font-size: 1.6em;
+					}
+				/* 版权标志 */
+				#版权 a{
+					text-decoration: none;
+					color: #000;
+				}
+				#版权 a:hover{
+					text-decoration: none;
+					color: #d78849;
+				}
+		</style>
 		
 	</head>
 	<body>
