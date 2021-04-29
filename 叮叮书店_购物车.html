@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>购物车</title>
+		<style type="text/css">
+			.购物车{
+				margin: 10px 5px;
+			}
+			.购物车-列表{
+				font-size: 1.0em;
+				width: 100%;
+				border-collapse: collapse;
+				/* 合并边框 */
+				border: 1px solid #eee8e1;
+				margin: 10px 10px;
+			}
+			
+			.购物车-头{
+				text-align: center;
+				background-color: #eee8e1;
+			}
+			
+			.购物车-主体 img{
+				width: 55px;
+				height: 55px;
+			}
+			.购物车-尾{
+				text-align: right;
+				background-color: #eee8e1;
+			}
+			.购物车-尾 a{
+				display: inline-block;
+				background-color: #FF0000;
+				color: #FFFFFF;
+				font-size: 1.1em;
+				padding: 0px 10px;
+				text-decoration: none;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<section class="购物车">
+			<h2 id="购物车">购物车</h2>
+			<table border="1" class="购物车-列表">
+				<tr class="购物车-头">
+					<th colspan="2">名称</th>
+					<th>单价</th>
+					<th>数量</th>
+					<th>合计</th>
+				</tr>
+				<tr class="购物车-主体">
+					<td><a href="#"><img src="./叮叮书店资源/《JAVAScript权威指南》-1.jpg"></a></td>
+					<td><h3>《JAVAScript权威指南》</h3></td>
+					<td>100.00</td>
+					<td>1</td>
+					<td>100.00</td>
+				</tr>
+				<tr class="购物车-主体">
+					<td><a href="#"><img src="./叮叮书店资源/分享经济%20供给侧改革的新经济方案-1.jpg"></a></td>
+					<td><h3>分享经济 供给侧改革的新经济方案</h3></td>
+					<td>43.50</td>
+					<td>1</td>
+					<td>43.50</td>
+				</tr>
+				<tr class="购物车-主体">
+					<td><a href="#"><img src="./叮叮书店资源/查令十字街84号（珍藏版）（汤唯、吴秀波主演北京遇上西雅图2）.jpg"></a></td>
+					<td><h3>查令十字街84号（珍藏版）（汤唯、吴秀波主演北京遇上西雅图2）</h3></td>
+					<td>43.50</td>
+					<td>1</td>
+					<td>43.50</td>
+				</tr>
+				<tr class="购物车-尾">
+					<td colspan="5">三件商品总价（不含运费）：187.00 <a href="#">去结算</a></td>
+					
+				</tr>
+			</table>
+		</section>
+	</body>
+</html>
